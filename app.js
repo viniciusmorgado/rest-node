@@ -1,12 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
-// const { Mongoose } = require("mongoose");
+const router = require("./Routes/EmployeeRoute");
 var app = express();
 
 // Route
 app.get("/", function(req, res){
     res.send("Hello World");
 });
+
+app.use("/Emp", router);
 
 // MongoDb Connection
 mongoose.connect("mongodb://localhost/test", {userNewUrlParser:true});
