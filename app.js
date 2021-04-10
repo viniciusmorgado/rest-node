@@ -5,7 +5,7 @@ var app = express();
 
 // Route
 app.get("/", function(req, res){
-    res.send("hello world");
+    res.send("Hello World");
 });
 
 // MongoDb Connection
